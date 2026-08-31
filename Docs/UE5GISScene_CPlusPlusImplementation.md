@@ -10,6 +10,10 @@ This project was converted from a Blueprint-only FPS prototype into a hybrid C++
 - `AFPSGameMode`: default class registration and respawn flow.
 - `AFPSPlayerController`: local game input mode and server respawn request.
 - `AFPSPlayerState`: replicated kills and deaths for multiplayer scoreboard use.
+- `UGISDigitalTwinSubsystem`: geographic origin management, lightweight longitude/latitude to Unreal world coordinate conversion, city asset registration, and POI query support.
+- `AGISCityAssetAnchor`: metadata anchor for imported city-scale assets, including source URL, coverage size, approximate geo-reference, HLOD, and Nanite-oriented optimization flags.
+- `AGISPointMarker`: point-of-interest marker for landmarks, roads, water areas, green land, utilities, and other GIS scene objects.
+- `AGISMeasurementTool`: distance and horizontal distance measurement helper for GIS-style spatial analysis.
 
 ## Blueprint Integration
 
@@ -21,6 +25,9 @@ Recommended Blueprint parent classes:
 - Weapon Blueprint parent: `FPSWeapon`
 - GameMode Blueprint parent: `FPSGameMode`
 - Projectile Blueprint parent: `FPSProjectile`
+- City asset anchor Blueprint parent: `GISCityAssetAnchor`
+- POI marker Blueprint parent: `GISPointMarker`
+- Measurement tool Blueprint parent: `GISMeasurementTool`
 
 ## Implemented Gameplay Flow
 
@@ -30,6 +37,14 @@ Recommended Blueprint parent classes:
 4. `FPSWeapon` handles fire, reload, ammo, muzzle effects, and damage.
 5. Damage is applied through Unreal's normal damage system.
 6. When health reaches zero, the character dies, PlayerState statistics update, and GameMode respawns the player after a short delay.
+
+## GIS / Digital Twin Flow
+
+1. The city asset is represented by `GISCityAssetAnchor`, using the Manama Bahrain 3D City Map Model listing as the test data source.
+2. `GISDigitalTwinSubsystem` keeps a geographic origin and converts longitude/latitude/elevation into UE world positions.
+3. `GISPointMarker` actors can be placed as landmarks, road nodes, water areas, green-land entries, or facility markers.
+4. `GISMeasurementTool` provides point-to-point distance and horizontal distance calculations for simple spatial analysis.
+5. The existing first-person character is used as an urban roaming and inspection camera inside the city-scale scene.
 
 ## Packaging Note
 
