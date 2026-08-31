@@ -1,5 +1,8 @@
 # UE5GISScene C++ Implementation Notes
 
+This project started as a UE5 FPS client-side gameplay demo and was later extended with
+city-scale rendering, GIS, and digital-twin-oriented support classes.
+
 This project was converted from a Blueprint-only FPS prototype into a hybrid C++ and Blueprint Unreal project.
 
 ## Main C++ Classes
