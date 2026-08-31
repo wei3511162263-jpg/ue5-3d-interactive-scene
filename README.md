@@ -33,8 +33,16 @@
 - 玩家状态实时同步
 - PIE（Play In Editor）双窗口对战测试通过
 
+| 城市级三维资产渲染测试 |
+- 导入城市级三维资产（建筑白模、道路网、水系、绿地），测试大规模
+  场景下的实时渲染性能
+- 调整材质、光照与后期处理参数，优化城市场景渲染效果
+- 在城市场景中验证第一人称漫游与空间碰撞检测功能
+
+*图：城市密集建筑区域实时渲染测试效果*
+
 ## 项目结构
-FPS1/
+UE5GISScene/
 ├── Config/          # 引擎配置文件
 ├── Content/         # 蓝图、资源、关卡
 │   ├── Blueprints/  # 角色、控制器、GameMode 等蓝图
@@ -42,11 +50,11 @@ FPS1/
 │   └── ...
 ├── .gitignore
 ├── .gitattributes
-└── FPS1.uproject
+└── UE5GISScene.uproject
 
 ## 运行方式
 
-1. 使用 Unreal Engine 5.x 打开 `FPS1.uproject`
+1. 使用 Unreal Engine 5.x 打开 `UE5GISScene.uproject`
 2. 如有 C++ 代码，点击编译
 3. 打开主关卡，点击 Play 运行
 4. 多窗口测试：将 Number of Players 设为 2，Play Mode 设为 New Editor Window (PIE)
