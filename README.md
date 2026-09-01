@@ -1,4 +1,4 @@
-# UE5 FPS 联机 Demo 与城市级三维场景扩展
+# UE5 FPS  Demo 与城市级三维场景扩展
 
 本项目基于 Unreal Engine 5 的 First Person 模板开发，完成了一个可联机的
 第一人称射击 Demo，覆盖角色移动、视角控制、射击、换弹、受击、死亡重生
@@ -7,6 +7,18 @@ GIS / 数字孪生方向的扩展包装，用于展示大规模场景漫游、�
 转换等能力。
 
 > 本项目为腾讯游戏「开局一课」客户端开发方向结业项目，已通过结业考核。
+
+*游戏实机demo：*
+
+<img width="400" height="224" alt="魏贤琪-长安大学-开局一课客户端大作业_1782056479 00h00m27s-00h00m44s" src="https://github.com/user-attachments/assets/3fd3e56f-cd25-4335-a996-b295930e292f" />
+<img width="400" height="224" alt="魏贤琪-长安大学-开局一课客户端大作业_1782056479 00h00m08s-00h00m26s" src="https://github.com/user-attachments/assets/0f9dba8e-35ea-430c-835d-4aa8c9d90cfb" />
+
+
+*城市级三维资产预览：*
+<img width="1280" height="720" alt="f0596115-4537-4c2c-b530-bfa166cc8928" src="https://github.com/user-attachments/assets/71689736-b59a-4cdc-86ab-de757352bcf1" />
+<img width="1280" height="720" alt="99ad70a1-5714-4fc0-816a-f4de03f12c45" src="https://github.com/user-attachments/assets/cce357e0-61ed-4e34-be3b-001c95777202" />
+
+
 
 ## 技术栈
 
